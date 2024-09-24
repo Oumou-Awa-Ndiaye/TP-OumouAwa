@@ -4,6 +4,12 @@ import (
 	"fmt"
 )
 
+func main() {
+	fmt.Println(Ft_coin([]int{1, 2, 5}, 11)) // résultat : 3
+	fmt.Println(Ft_coin([]int{2}, 3))        // résultat : -1
+	fmt.Println(Ft_coin([]int{1}, 0))        // résultat : 0
+}
+
 func Ft_coin(coins []int, amount int) int {
 	//D'abord ici il n'y aura pas de pièce si le montant est 0
 	if amount == 0 {
@@ -29,10 +35,4 @@ func Ft_coin(coins []int, amount int) int {
 	}
 
 	return minCoins
-}
-
-func main() {
-	fmt.Println(Ft_coin([]int{1, 2, 5}, 11)) // résultat : 3
-	fmt.Println(Ft_coin([]int{2}, 3))        // résultat : -1
-	fmt.Println(Ft_coin([]int{1}, 0))        // résultat : 0
 }
